@@ -3,46 +3,24 @@ def principal():
     from datetime import datetime
     while True:
     # Entrada
+        hora,minus = input("Ingrese una hora en formato hh:mm ").split(":")
+        hora = int(hora)
+        minus = int(minus)
+        if int(hora) <= 12:
+            am_pm = input("¿Su hora es AM o PM? ").upper()
+    # Proceso
+            if am_pm == "AM" and hora == 12:
+                hora = 00
+            elif am_pm == "PM" and hora < 12:
+                hora = hora+12
         try:
-            hora,minus = input("Ingrese una hora en formato hh:mm ").split(":")
-            if int(hora) > 12:
-                print(f"Su hora en formato 24H es las {hora}:{minus}")
+            horaconv = datetime(1,1,1, hora, minus)
+            horafin = datetime.strftime(horaconv,"%H:%M")
+            # Salida
+            print(f"Su hora en formato 24H es las {horafin}")
+            seguir = input("¿Quiere introducir otra hora? y/n: ").lower()
+            if seguir == "n":
+                print("Fin programa horas.")
                 break
-            if int(hora) <= 12:
-                am_pm = input("¿Su hora es AM o PM? ").upper()
-        # Proceso
-                if am_pm == "AM":
-                    if int(hora) == 12:
-                        hora = 00
-                    #    horaconv = datetime(1,1,1, int(hora), int(minus))
-                      #  hora12 = datetime.strftime(horaconv,"%H:%M")
-                        # Salida
-                       # print(f"Su hora en formato 24H es las {hora12}")
-                        break
-                    elif int(hora) < 12:
-                      #  horaconv = datetime(1,1,1, int(hora), int(minus))
-                       # hora12 = datetime.strftime(horaconv,"%H:%M")
-                        # Salida
-                        #print(f"Su hora en formato 24H es las {hora12}")
-                        break
-                elif am_pm == "PM":
-                    if int(hora) == 12:
-                      #  horaconv = datetime(1,1,1, int(hora), int(minus))
-                      #  hora12 = datetime.strftime(horaconv,"%H:%M")
-                        # Salida
-                       # print(f"Su hora en formato 24H es las {hora12}")
-                        break
-                    elif int(hora) < 12:
-                        hora = int(hora)+12
-                       # horaconv = datetime(1,1,1,hora2,int(minus))
-                        #hora12 = datetime.strftime(horaconv,"%H:%M")
-                        # Salida
-                        #print(f"Su hora en formato 24H es las {hora12}")
-                        break
         except ValueError:
-                print("Hora inválida. Por favor, ingrese una hora válida en formato hh:mm.")
-
-    horaconv = datetime(1,1,1, int(hora), int(minus))
-    hora12 = datetime.strftime(horaconv,"%H:%M")
-    # Salida
-    print(f"Su hora en formato 24H es las {hora12}")
+            print("Hora inválida. Por favor, ingrese una hora válida en formato hh:mm.")
