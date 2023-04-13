@@ -47,14 +47,3 @@ Los ejercicios corresponden con las siguientes cuestiones:
 11. Determinar que numeros introducidos son multiplos de 3.
 ```
 
-Screenshot del funcionamiento del programa:
-
-![Captura](images/main.png)
-
-## Troubleshooting
-
-1. **No puedo instalar los requirements. Dice que ya están instalados. ¿Debo hacer algo?**
-
-![Troubleshooting requirements](images/troubleshooting_requirements.png)
-
-No, no es necesario hacer nada. Estos mensajes indican que ya tenemos instaladas las librerias que estamos intentando instalar.
