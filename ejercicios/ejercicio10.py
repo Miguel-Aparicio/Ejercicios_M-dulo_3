@@ -12,3 +12,6 @@ def principal():
     for i in range(len(listaCadenas)):
         if "a" in listaCadenas[i] or "e" in listaCadenas[i] or "i" in listaCadenas[i] or "o" in listaCadenas[i] or "u" in listaCadenas[i]:
             print(listaCadenas[i])
+            
+if __name__=="__main__":
+   principal()

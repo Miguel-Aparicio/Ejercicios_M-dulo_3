@@ -12,3 +12,6 @@ def principal():
     for i in range(len(listaCadenas)):
         if len(listaCadenas[i]) > 5:
             print(listaCadenas[i])
+            
+if __name__=="__main__":
+   principal()

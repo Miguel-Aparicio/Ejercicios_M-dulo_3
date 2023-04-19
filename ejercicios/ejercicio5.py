@@ -9,3 +9,7 @@ def principal():
     cadena_invertida = "".join(cadena_invertida)
     # Salida
     print(cadena_invertida)
+    
+    
+if __name__=="__main__":
+   principal()

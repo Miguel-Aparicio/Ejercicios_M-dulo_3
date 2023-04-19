@@ -15,3 +15,6 @@ def principal():
     for i in range(len(listaNumeros)):
         if listaNumeros[i] % 3 == 0:
             print(listaNumeros[i])
+            
+if __name__=="__main__":
+   principal()

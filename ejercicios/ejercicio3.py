@@ -10,3 +10,6 @@ def principal():
         i += 1
     # Salida
     print(numero)
+    
+if __name__=="__main__":
+   principal()

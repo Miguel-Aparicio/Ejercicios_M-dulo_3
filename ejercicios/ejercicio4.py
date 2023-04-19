@@ -24,3 +24,6 @@ def principal():
                 break
         except ValueError:
             print("Hora inválida. Por favor, ingrese una hora válida en formato hh:mm.")
+
+if __name__=="__main__":
+   principal()

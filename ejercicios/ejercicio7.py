@@ -3,3 +3,6 @@ def principal():
 
     for i in range(len(cadena)):
         print(f"{cadena[i]}\n")
+        
+if __name__=="__main__":
+   principal()

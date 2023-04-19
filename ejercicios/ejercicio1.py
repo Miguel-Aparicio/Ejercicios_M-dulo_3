@@ -13,3 +13,6 @@ def principal():
                         break
                 except:
                         print("Errores en los valores introducidos. Intentelo de nuevo.")
+
+if __name__=="__main__":
+   principal()
